@@ -1,0 +1,21 @@
+.title {
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.register-button {
+    margin-right: 10px;
+}
+
+.navbar-items {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    margin-right: 4rem;
+}
+
+.username {
+    text-decoration: none;
+    color: black;
+}
+
