@@ -18,7 +18,7 @@ function UpdateQuestion() {
     const questionId = useSelector(selectSelectedQuestionId);
 
     const onFormSubmit = async (updatedQuestionDetails) => {
-        const response = await axios.put(`http://localhost:8080/question/updateQuestion/${questionId}`, updatedQuestionDetails);
+        const response = await axios.put(`http://enthusiastic-mercy-production.up.railway.app/question/updateQuestion/${questionId}`, updatedQuestionDetails);
         if (response.data === 'Question Successfully Updated') {
             alert("Question updated successfully");
             navigate('/viewAllQuestions');

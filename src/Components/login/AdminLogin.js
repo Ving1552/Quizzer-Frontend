@@ -19,7 +19,7 @@ function AdminLogin() {
     let navigate = useNavigate();
 
     const onFormSubmit = async (adminCredentialObj) => {
-        const response = await axios.post('http://viaduct.proxy.rlwy.net:37369/railway', adminCredentialObj);
+        const response = await axios.post('http://enthusiastic-mercy-production.up.railway.app/admin/login', adminCredentialObj);
         if (response.data === 'Success') {
             navigate('/admindashboard');
             dispatch(adminlogin(adminCredentialObj));

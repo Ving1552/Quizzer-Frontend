@@ -17,7 +17,7 @@ function AddQuestion() {
     let navigate = useNavigate();
 
     const onFormSubmit = async (newQuestionDetails) => {
-        const response = await axios.post('http://localhost:8080/question/addQuestion', newQuestionDetails);
+        const response = await axios.post('http://enthusiastic-mercy-production.up.railway.app/question/addQuestion', newQuestionDetails);
         if (response.data === 'Question added successfully') {
             alert("Question added successfully");
             navigate('/viewAllQuestions');

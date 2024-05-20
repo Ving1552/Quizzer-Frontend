@@ -22,7 +22,7 @@ function PlayQuiz() {
     };
 
     const fetchData = async () => {
-        await axios.get(`http://localhost:8080/quiz/getQuiz/${selectedQuiz}`)
+        await axios.get(`http://enthusiastic-mercy-production.up.railway.app/quiz/getQuiz/${selectedQuiz}`)
             .then((res) => {
                 setQuestions(res.data);
             })

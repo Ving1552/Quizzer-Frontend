@@ -17,7 +17,7 @@ function UserSignup() {
 
   const onFormSubmit = async(userObj) => {
     //http post request
-    await axios.post('http://localhost:8080/user/register', userObj)
+    await axios.post('http://enthusiastic-mercy-production.up.railway.app/user/register', userObj)
       .then(response => {
         alert(response.data);
         //if user created successfully navigate to login as user
@@ -25,7 +25,7 @@ function UserSignup() {
           navigate('/login')
         }
         else if(response.data === 'Username already exists, please choose some other username') {
-          alert()
+          alert(response.data);
         }
       })
       .catch(error => alert("Something went wrong"))

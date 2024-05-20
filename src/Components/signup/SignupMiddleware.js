@@ -19,7 +19,7 @@ function SignupMiddleware() {
         <h3 className='text-center mt-5'>Do you want to</h3>
         <br />
         <div className='text-center'>
-            <Button variant = 'dark' onClick={userSignupRoute} style={{'margin-right' : '30px'}}>Signup As User</Button>
+            <Button variant = 'dark' onClick={userSignupRoute} style={{'marginRight' : '30px'}}>Signup As User</Button>
         <Button variant = 'dark' onClick={adminSignupRoute}>Signup As Admin</Button>
         </div>
         

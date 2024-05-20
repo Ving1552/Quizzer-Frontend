@@ -19,7 +19,7 @@ function UserLogin() {
   let navigate = useNavigate();
 
   const onFormSubmit = async (userCredentialObj) => {
-    await axios.post('http://viaduct.proxy.rlwy.net:37369/railway', userCredentialObj)
+    await axios.post('http://enthusiastic-mercy-production.up.railway.app/user/login', userCredentialObj)
       .then((res) => {
         if (res.data === 'Success') {
           navigate('/userdashboard');

@@ -13,7 +13,7 @@ function ViewAllQuestions() {
     let questionNo = 0;
 
     const fetchData = async () => {
-        await axios.get(`http://localhost:8080/question/getAllQuestions`)
+        await axios.get(`http://enthusiastic-mercy-production.up.railway.app/question/getAllQuestions`)
             .then((res) => {
                 setQuestions(res.data);
             })

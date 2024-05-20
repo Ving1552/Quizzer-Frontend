@@ -17,7 +17,7 @@ function AdminSignup() {
 
   const onFormSubmit = async(adminObj) => {
     //http post request
-    await axios.post('http://localhost:8080/admin/register', adminObj)
+    await axios.post('http://enthusiastic-mercy-production.up.railway.app/admin/register', adminObj)
       .then(response => {
         alert(response.data);
         //if user created successfully navigate to login as user
