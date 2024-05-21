@@ -22,7 +22,7 @@ function UserSignup() {
         alert(response.data);
         //if user created successfully navigate to login as user
         if (response.data === 'Success') {
-          navigate('/login')
+          navigate('/loginmiddleware')
         }
         else if(response.data === 'Username already exists, please choose some other username') {
           alert(response.data);
