@@ -19,7 +19,7 @@ function UserLogin() {
   let navigate = useNavigate();
 
   const onFormSubmit = async (userCredentialObj) => {
-    await axios.post('http://enthusiastic-mercy-production.up.railway.app/user/login', userCredentialObj)
+    await axios.post('https://enthusiastic-mercy-production.up.railway.app/user/login', userCredentialObj)
       .then((res) => {
         if (res.data === 'Success') {
           navigate('/userdashboard');
@@ -28,7 +28,7 @@ function UserLogin() {
       })
       .catch((error) => {
         if (error) {
-          alert('Wrong Password');
+          alert('Something went wrong');
         }
       });
   };

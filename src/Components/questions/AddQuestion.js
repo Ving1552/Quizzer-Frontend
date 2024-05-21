@@ -17,12 +17,18 @@ function AddQuestion() {
     let navigate = useNavigate();
 
     const onFormSubmit = async (newQuestionDetails) => {
-        const response = await axios.post('http://enthusiastic-mercy-production.up.railway.app/question/addQuestion', newQuestionDetails);
-        if (response.data === 'Question added successfully') {
-            alert("Question added successfully");
-            navigate('/viewAllQuestions');
-        }
-        else alert("Something went wrong");
+        const response = await axios.post('https://enthusiastic-mercy-production.up.railway.app/question/addQuestion', newQuestionDetails)
+        .then((response) => {
+            if (response.data === 'Question added successfully') {
+                alert("Question added successfully");
+                navigate('/viewAllQuestions');
+            }
+        })
+        .catch((error) => {
+            if(error) {
+                alert("Something went wrong");
+            }
+        })
     }
 
     return (

@@ -18,11 +18,17 @@ function CreateQuiz() {
     let navigate = useNavigate();
 
     const onFormSubmit = async (newQuizDetails) => {
-        const response = await axios.post('http://enthusiastic-mercy-production.up.railway.app/quiz/createQuiz', newQuizDetails);
-        if (response.data === 'Quiz created successfully') {
-            navigate('/viewAllQuizzes');
-        }
-        else alert("Something went wrong");
+        const response = await axios.post('https://enthusiastic-mercy-production.up.railway.app/quiz/createQuiz', newQuizDetails)
+        .then((response) => {
+            if (response.data === 'Quiz created successfully') {
+                navigate('/viewAllQuizzes');
+            }
+        })
+        .catch((error) => {
+            if(error) {
+                alert("Something went wrong");
+            }
+        })
     }
 
     return (

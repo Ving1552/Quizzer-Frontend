@@ -22,11 +22,12 @@ function PlayQuiz() {
     };
 
     const fetchData = async () => {
-        await axios.get(`http://enthusiastic-mercy-production.up.railway.app/quiz/getQuiz/${selectedQuiz}`)
+        await axios.get(`https://enthusiastic-mercy-production.up.railway.app/quiz/getQuiz/${selectedQuiz}`)
             .then((res) => {
                 setQuestions(res.data);
             })
             .catch((error) => {
+                if(error)
                 alert("Something went wrong");
             });
     }

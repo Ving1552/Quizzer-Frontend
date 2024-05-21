@@ -17,7 +17,7 @@ function UserSignup() {
 
   const onFormSubmit = async(userObj) => {
     //http post request
-    await axios.post('http://enthusiastic-mercy-production.up.railway.app/user/register', userObj)
+    await axios.post('https://enthusiastic-mercy-production.up.railway.app/user/register', userObj)
       .then(response => {
         alert(response.data);
         //if user created successfully navigate to login as user

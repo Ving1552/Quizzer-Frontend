@@ -19,15 +19,19 @@ function AdminLogin() {
     let navigate = useNavigate();
 
     const onFormSubmit = async (adminCredentialObj) => {
-        const response = await axios.post('http://enthusiastic-mercy-production.up.railway.app/admin/login', adminCredentialObj);
-        if (response.data === 'Success') {
-            navigate('/admindashboard');
-            dispatch(adminlogin(adminCredentialObj));
-        }
-        else if (response.data === 'Wrong Password') {
-            alert('Wrong Password');
-        }
-        else alert("Something went wrong");
+        await axios.post('https://enthusiastic-mercy-production.up.railway.app/admin/login', adminCredentialObj)
+        .then((response) => {
+            if (response.data === 'Success') {
+                navigate('/admindashboard');
+                dispatch(adminlogin(adminCredentialObj));
+            }
+        })
+        .catch((error) => {
+            if(error) {
+                alert("Something went wrong");
+            }
+        })
+        
     }
 
         return (

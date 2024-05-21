@@ -18,12 +18,18 @@ function UpdateQuestion() {
     const questionId = useSelector(selectSelectedQuestionId);
 
     const onFormSubmit = async (updatedQuestionDetails) => {
-        const response = await axios.put(`http://enthusiastic-mercy-production.up.railway.app/question/updateQuestion/${questionId}`, updatedQuestionDetails);
-        if (response.data === 'Question Successfully Updated') {
-            alert("Question updated successfully");
-            navigate('/viewAllQuestions');
-        }
-        else alert("Something went wrong");
+        const response = await axios.put(`https://enthusiastic-mercy-production.up.railway.app/question/updateQuestion/${questionId}`, updatedQuestionDetails)
+        .then((response) => {
+            if (response.data === 'Question added successfully') {
+                alert("Question added successfully");
+                navigate('/viewAllQuestions');
+            }
+        })
+        .catch((error) => {
+            if(error) {
+                alert("Something went wrong");
+            }
+        })
     }
 
     return (

@@ -19,7 +19,7 @@ function Userdashboard() {
   }, []);
 
   const fetchQuizzes = async () => {
-    await axios.get('http://enthusiastic-mercy-production.up.railway.app/quiz/getAllQuizzes')
+    await axios.get('https://enthusiastic-mercy-production.up.railway.app/quiz/getAllQuizzes')
       .then((res) => {
         setQuizzes(res.data)
       })
