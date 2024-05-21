@@ -42,7 +42,7 @@ function PlayQuiz() {
             response: response
         }));
 
-        axios.post(`http://localhost:8080/quiz/submitResponses`, selectedOptionsList)
+        axios.post(`https://enthusiastic-mercy-production.up.railway.app/quiz/submitResponses`, selectedOptionsList)
             .then((response) => {
                 dispatch(userScore(response.data));
             })
