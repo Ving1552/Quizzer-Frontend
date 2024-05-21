@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button, Card } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import { selectAdmin, selectIsAdminLoggedIn } from '../../redux/slices/Adminslice';
 
 function Admindashboard() {

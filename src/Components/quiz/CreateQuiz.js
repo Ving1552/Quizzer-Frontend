@@ -21,7 +21,7 @@ function CreateQuiz() {
         const response = await axios.post('https://enthusiastic-mercy-production.up.railway.app/quiz/createQuiz', newQuizDetails)
         .then((response) => {
             if (response.data === 'Quiz created successfully') {
-                navigate('/viewAllQuizzes');
+                navigate('/admindashboard');
             }
         })
         .catch((error) => {
